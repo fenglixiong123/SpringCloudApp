@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: microservice-config-client-eureka
+      profile: dev
+      label: master
+      uri: http://localhost:6001/    #直连

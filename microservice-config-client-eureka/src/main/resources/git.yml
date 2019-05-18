@@ -1,0 +1,19 @@
+server:
+  port: 5010
+
+spring:
+  application:
+    name: microservice-config-client-eureka
+
+eureka:
+  instance:
+    hostname: localhost
+
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+  server:
+    enable-self-preservation: false

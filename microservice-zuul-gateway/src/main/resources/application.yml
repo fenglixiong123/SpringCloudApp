@@ -1,0 +1,36 @@
+server:
+  port: 9101
+
+spring:
+  application:
+    name: microservice-zuul-gateway
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true
+
+zuul:
+#统一前缀
+  prefix: /shanghai
+#忽略所有的直接以微服务名字访问的路径
+  ignored-services: '*'
+  routes:
+    provider-dept: #这个名字随意
+      serviceId: microservice-provider-dept
+      path: /mydept/**
+
+
+
+
+
+#应用信息
+info:
+  app.name: ${spring.application.name}
+  company.name: www.fenglixiong.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}

@@ -1,0 +1,24 @@
+server:
+  port: 5001
+
+spring:
+  application:
+    name: microservice-config-client
+  cloud:
+    config:
+      name: provideruser
+      profile: dev
+      label: master
+      discovery:      #通过注册中心取数据
+        enabled: true
+        service-id: microservice-config-server
+#      uri: http://localhost:6001/    #直连
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true

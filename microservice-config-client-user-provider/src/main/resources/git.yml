@@ -1,0 +1,20 @@
+server:
+  port: 5020
+
+spring:
+  application:
+    name: microservice-config-client-user-provider
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5010/eureka
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true
+
+info:
+  app.name: ${spring.application.name}
+  company.name: www.fenglixiong.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}

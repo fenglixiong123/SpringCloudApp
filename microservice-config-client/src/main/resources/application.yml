@@ -1,0 +1,8 @@
+
+# 注意名称要跟git上面的配置文件名称一致
+spring:
+  application:
+    name: microservice-config-client
+
+
+
