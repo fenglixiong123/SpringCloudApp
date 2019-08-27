@@ -3,8 +3,7 @@ server:
 
 spring:
   application:
-    name: microservice-zuul-gateway
-
+    name: microservice-zuul
 
 eureka:
   client:

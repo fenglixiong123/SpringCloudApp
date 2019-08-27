@@ -16,10 +16,15 @@ eureka:                                               # 客户端注册进入eur
   instance:
     instance-id: ${spring.application.name}:${server.port}  #别名处理，显示在页面status
     prefer-ip-address: true                                 #鼠标放在微服务名字上面显示IP地址
-
 #用于显示info信息
 info:
   app.name: ${spring.application.name}
   company.name: www.fenglixiong.com
   build.artifactId: ${project.artifactId}
   build.version: ${project.version}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

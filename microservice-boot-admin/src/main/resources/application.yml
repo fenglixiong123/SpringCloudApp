@@ -4,6 +4,10 @@ server:
 spring:
   application:
     name: microservice-boot-admin
+  boot:
+    admin:
+      ui:
+        title: 统一服务监控中心(冯立雄)
 
 eureka:                                               # 客户端注册进入eureka服务列表内
   client:
