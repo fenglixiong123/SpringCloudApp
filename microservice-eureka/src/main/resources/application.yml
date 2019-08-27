@@ -15,4 +15,7 @@ eureka:
   server:
     enable-self-preservation: false     #禁用自我保护模式
 
-
+info:
+  groupId: @project.groupId@
+  artifactId: @project.artifactId@
+  version: @project.version@

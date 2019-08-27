@@ -4,6 +4,10 @@ server:
 spring:
   application:
     name: microservice-provider-user
+#  boot:
+#    admin:
+#      client:
+#        url: http://localhost:9999                  #admin server注册地址
 
 eureka:                                               # 客户端注册进入eureka服务列表内
   client:

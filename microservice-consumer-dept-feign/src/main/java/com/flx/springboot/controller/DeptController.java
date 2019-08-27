@@ -17,9 +17,9 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/feign")
-public class DeptController_Feign {
+public class DeptController {
 
-    private static final Logger logger = LoggerFactory.getLogger(DeptController_Feign.class);
+    private static final Logger logger = LoggerFactory.getLogger(DeptController.class);
 
     @Autowired
     private IDeptClientService deptClientService;

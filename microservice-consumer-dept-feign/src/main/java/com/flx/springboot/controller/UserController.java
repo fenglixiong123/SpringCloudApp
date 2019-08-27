@@ -19,9 +19,9 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/feign")
-public class UserController_Feign {
+public class UserController {
 
-    private static final Logger logger = LoggerFactory.getLogger(UserController_Feign.class);
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     private IUserClientService userClientService;

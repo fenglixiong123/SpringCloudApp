@@ -25,13 +25,14 @@
         <module>../microservice-provider-dept</module>
         <module>../microservice-provider-dept-hystrix</module>
         <module>../microservice-provider-user</module>
-        <module>../microservice-zuul-gateway</module>
+        <module>../microservice-zuul</module>
         <module>../microservice-config-server</module>
         <module>../microservice-config-client</module>
         <module>../microservice-config-client-eureka</module>
         <module>../microservice-config-client-user-consumer</module>
         <module>../microservice-config-client-user-provider</module>
         <module>../microservice-gateway</module>
+        <module>../microservice-boot-admin</module>
     </modules>
 
     <packaging>pom</packaging>
