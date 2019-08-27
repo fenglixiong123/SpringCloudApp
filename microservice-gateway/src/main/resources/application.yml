@@ -1,0 +1,34 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: microservice-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: consumer-dept-feign
+          url: lb://consumer-dept-feign
+          predicates:
+            - Path=/
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true
+
+
+
+
+
+
+#应用信息
+info:
+  app.name: ${spring.application.name}
+  company.name: www.fenglixiong.com
+  build.artifactId: ${project.artifactId}
+  build.version: ${project.version}
