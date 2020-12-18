@@ -1,4 +1,4 @@
-package com.flx.springcloud.nacos;
+package com.flx.springcloud.nacos.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
@@ -11,11 +11,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @Slf4j
 @SpringBootApplication
-public class NacosApplication {
+public class NacosConfigApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(NacosApplication.class, args);
-        log.info(">>>>>>>>NacosApplication started !");
+        SpringApplication.run(NacosConfigApplication.class, args);
+        log.info(">>>>>>>>NacosConfigApplication started !");
     }
 
 }

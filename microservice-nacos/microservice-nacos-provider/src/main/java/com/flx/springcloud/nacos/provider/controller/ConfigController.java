@@ -1,4 +1,4 @@
-package com.flx.springcloud.nacos.controller;
+package com.flx.springcloud.nacos.provider.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
