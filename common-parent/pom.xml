@@ -33,6 +33,7 @@
         <module>../microservice-config-client-user-provider</module>
         <module>../microservice-gateway</module>
         <module>../microservice-boot-admin</module>
+        <module>../microservice-nacos</module>
         <module>../app-test</module>
     </modules>
 
