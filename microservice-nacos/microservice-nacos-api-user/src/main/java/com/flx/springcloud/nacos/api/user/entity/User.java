@@ -1,4 +1,4 @@
-package com.flx.springcloud.nacos.provider.entity;
+package com.flx.springcloud.nacos.api.user.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

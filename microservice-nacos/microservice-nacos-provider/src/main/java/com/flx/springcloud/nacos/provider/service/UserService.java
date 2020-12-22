@@ -1,6 +1,6 @@
 package com.flx.springcloud.nacos.provider.service;
 
-import com.flx.springcloud.nacos.provider.entity.User;
+import com.flx.springcloud.nacos.api.user.entity.User;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
