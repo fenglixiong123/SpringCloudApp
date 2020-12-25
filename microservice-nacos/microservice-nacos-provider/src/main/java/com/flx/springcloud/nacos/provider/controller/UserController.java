@@ -33,5 +33,11 @@ public class UserController {
         return userService.findUserAll();
     }
 
+    @PostMapping(value = "/update")
+    public String update(@RequestBody User user){
+        log.info("provider update,{}",user);
+        return user.toString();
+    }
+
 
 }

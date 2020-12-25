@@ -16,6 +16,7 @@
         <module>microservice-nacos-provider</module>
         <module>microservice-nacos-consumer</module>
         <module>microservice-nacos-api-user</module>
+        <module>microservice-nacos-sdk</module>
     </modules>
 
     <properties>
