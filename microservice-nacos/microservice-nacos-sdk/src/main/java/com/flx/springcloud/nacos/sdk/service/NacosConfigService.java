@@ -14,6 +14,11 @@ import java.util.Properties;
  * @Author: Fenglixiong
  * @Date: 2020/12/25 16:39
  * @Description: 配置sdk
+ * 1.获取配置接口
+ * 2.发布配置
+ * 3.删除配置
+ * 4.添加配置监听功能
+ * 5.删除监听
  */
 @Slf4j
 @Service
