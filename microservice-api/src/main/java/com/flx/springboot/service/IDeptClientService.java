@@ -1,7 +1,6 @@
 package com.flx.springboot.service;
 
-import com.flx.springboot.entity.Dept;
-import com.flx.springboot.service.fallback.DeptClientServiceFallbackFactory;
+import com.flx.springboot.service.fallback.UserClientServiceFallbackFactory;
 import com.flx.springboot.utils.CommonUtils;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +15,7 @@ import java.util.List;
  * @Description:
  * @Date: Created in 2018/5/7 19:07
  */
-@FeignClient(value = CommonUtils.MICROSERVICE_PROVIDER_DEPT,fallbackFactory = DeptClientServiceFallbackFactory.class)
+@FeignClient(value = CommonUtils.MICROSERVICE_PROVIDER_DEPT,fallbackFactory = UserClientServiceFallbackFactory.class)
 public interface IDeptClientService {
 
     @RequestMapping(value = "/dept/add",method = RequestMethod.POST)
