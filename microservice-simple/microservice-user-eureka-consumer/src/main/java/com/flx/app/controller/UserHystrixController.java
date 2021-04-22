@@ -1,6 +1,6 @@
 package com.flx.app.controller;
 
-import com.flx.springboot.service.IUserClientService;
+import com.flx.springboot.service.EurekaUserClientService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserHystrixController {
 
     @Autowired
-    private IUserClientService userClientService;
+    private EurekaUserClientService userClientService;
 
     /**
      * 若出现异常则调用@HystrixCommand里面的方法处理

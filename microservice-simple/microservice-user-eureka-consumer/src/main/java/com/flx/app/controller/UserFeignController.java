@@ -1,7 +1,7 @@
 package com.flx.app.controller;
 
 import com.flx.springboot.entity.User;
-import com.flx.springboot.service.IUserClientService;
+import com.flx.springboot.service.EurekaUserClientService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ public class UserFeignController {
     private static final Logger logger = LoggerFactory.getLogger(UserFeignController.class);
 
     @Autowired
-    private IUserClientService userClientService;
+    private EurekaUserClientService userClientService;
 
     @RequestMapping(value = "/user/get/{id}",method = RequestMethod.GET)
     public Object getUser(@PathVariable("id")Long id){

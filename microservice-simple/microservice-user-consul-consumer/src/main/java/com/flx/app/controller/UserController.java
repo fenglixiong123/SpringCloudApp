@@ -1,7 +1,8 @@
 package com.flx.app.controller;
 
 import com.flx.springboot.entity.User;
-import com.flx.springboot.service.IUserClientService;
+import com.flx.springboot.service.ConsulUserService;
+import com.flx.springboot.service.EurekaUserClientService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,13 +19,13 @@ import java.util.List;
  * @Date: Created in 2018/5/7 19:46
  */
 @RestController
-@RequestMapping("/feign")
-public class UserFeignController {
+@RequestMapping("/consul/consumer")
+public class UserController {
 
-    private static final Logger logger = LoggerFactory.getLogger(UserFeignController.class);
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
-    private IUserClientService userClientService;
+    private ConsulUserService userClientService;
 
     @RequestMapping(value = "/user/get/{id}",method = RequestMethod.GET)
     public Object getUser(@PathVariable("id")Long id){

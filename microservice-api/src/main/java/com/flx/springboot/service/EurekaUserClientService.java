@@ -15,7 +15,7 @@ import java.util.List;
  * @Date: Created in 2018/5/7 19:42
  */
 @FeignClient(value = CommonUtils.MICROSERVICE_PROVIDER_USER)
-public interface IUserClientService {
+public interface EurekaUserClientService {
 
     @RequestMapping(value = "/user/get/{id}",method = RequestMethod.GET)
     Object getUser(@PathVariable("id") Long id);

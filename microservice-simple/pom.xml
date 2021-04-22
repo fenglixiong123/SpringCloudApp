@@ -14,8 +14,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>microservice-user-consumer-eureka</module>
-        <module>microservice-user-provider-eureka</module>
+        <module>microservice-user-eureka-consumer</module>
+        <module>microservice-user-eureka-provider</module>
         <module>microservice-user-consul-consumer</module>
         <module>microservice-user-consul-provider</module>
     </modules>

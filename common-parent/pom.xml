@@ -3,13 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.5.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
-
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.flx.springcloud</groupId>
@@ -17,20 +10,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>../microservice-eureka</module>
-        <module>../microservice-consumer-dept-rest</module>
         <module>../microservice-api</module>
-        <module>../microservice-consumer-dept-ribbon</module>
-        <module>../microservice-consumer-dept-feign</module>
-        <module>../microservice-consumer-hystrix-dashboard</module>
-        <module>../microservice-provider-dept</module>
-        <module>../microservice-provider-dept-hystrix</module>
-        <module>../microservice-provider-user</module>
         <module>../microservice-zuul</module>
-        <module>../microservice-config-server</module>
-        <module>../microservice-config-client</module>
-        <module>../microservice-config-client-eureka</module>
-        <module>../microservice-config-client-user-consumer</module>
-        <module>../microservice-config-client-user-provider</module>
         <module>../microservice-gateway</module>
         <module>../microservice-boot-admin</module>
         <module>../microservice-nacos</module>
@@ -43,10 +24,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <junit.version>4.12</junit.version>
-        <log4j.version>1.2.17</log4j.version>
-        <lombok.version>1.16.18</lombok.version>
-        <alibaba.fastjson.version>1.1.41</alibaba.fastjson.version>
     </properties>
 
     <dependencyManagement>
@@ -56,7 +33,15 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Greenwich.SR1</version>
+                <version>Hoxton.SR10</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--spring-boot-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.3.10.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -82,28 +67,24 @@
                 <version>1.2.3</version>
             </dependency>
             <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
-                <version>${log4j.version}</version>
+                <version>1.2.17</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
-                <version>${alibaba.fastjson.version}</version>
+                <version>1.1.41</version>
             </dependency>
         </dependencies>
+
     </dependencyManagement>
 
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

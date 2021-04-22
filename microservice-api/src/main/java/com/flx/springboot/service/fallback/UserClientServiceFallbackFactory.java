@@ -1,7 +1,7 @@
 package com.flx.springboot.service.fallback;
 
 import com.flx.springboot.entity.User;
-import com.flx.springboot.service.IUserClientService;
+import com.flx.springboot.service.EurekaUserClientService;
 import feign.hystrix.FallbackFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,13 +18,13 @@ import java.util.List;
  * 客户端发现服务停止就会采用默认返回值
  */
 @Component
-public class UserClientServiceFallbackFactory implements FallbackFactory<IUserClientService>{
+public class UserClientServiceFallbackFactory implements FallbackFactory<EurekaUserClientService>{
 
     private static final Logger logger = LoggerFactory.getLogger(UserClientServiceFallbackFactory.class);
 
     @Override
-    public IUserClientService create(Throwable throwable) {
-        return new IUserClientService() {
+    public EurekaUserClientService create(Throwable throwable) {
+        return new EurekaUserClientService() {
             @Override
             public Object getUser(Long id) {
                 User dept = new User()

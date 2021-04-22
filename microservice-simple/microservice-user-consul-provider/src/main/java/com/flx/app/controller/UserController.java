@@ -18,7 +18,7 @@ import java.util.List;
  * @Date: Created in 2018/5/7 16:14
  */
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/consul/provider/user")
 public class UserController {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
@@ -27,7 +27,7 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping(value = "/get/{id}",method = RequestMethod.GET)
-    public Object getUser(@PathVariable("id")Long id){
+    public User getUser(@PathVariable("id")Long id){
         User user = userService.findUserById(id);
         logger.info("====findUserById:"+user);
         return user;

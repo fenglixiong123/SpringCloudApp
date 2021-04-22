@@ -2,20 +2,20 @@ package com.flx.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @Author: FengLiXiong
  * @Description:
  * @Date: Created in 2018/5/7 16:11
  */
-@EnableEurekaClient
+@EnableDiscoveryClient
 @SpringBootApplication
-public class ProviderUser9001 {
+public class ProviderApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(ProviderUser9001.class,args);
+        SpringApplication.run(ProviderApplication.class,args);
         System.out.println("ProviderUser9001 Running!");
 
     }
